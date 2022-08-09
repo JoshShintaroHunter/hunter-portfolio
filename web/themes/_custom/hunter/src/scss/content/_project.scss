@@ -57,7 +57,7 @@
           @include ratio-image;
 
           img {
-            width: auto;
+            width: 100%;
             filter: invert(28%) sepia(69%) saturate(21%) hue-rotate(333deg) brightness(95%) contrast(86%);
           }
         }
