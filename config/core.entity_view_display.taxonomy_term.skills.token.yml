@@ -1,0 +1,24 @@
+uuid: 98d06c28-3967-49d3-99d0-37f35a80b380
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.token
+    - field.field.taxonomy_term.skills.field_bucket
+    - field.field.taxonomy_term.skills.field_logo
+    - taxonomy.vocabulary.skills
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: taxonomy_term.skills.token
+targetEntityType: taxonomy_term
+bundle: skills
+mode: token
+content: {  }
+hidden:
+  description: true
+  field_bucket: true
+  field_logo: true

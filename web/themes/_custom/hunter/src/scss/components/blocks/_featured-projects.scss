@@ -1,0 +1,19 @@
+.block-inline-blockfeatured-projects {
+  @extend %basic-header;
+
+  .field--name-field-projects {
+    @extend %flex-cards-three;
+  }
+
+  .field--name-field-view-all-link {
+    text-align: center;
+
+    a {
+      @include expanding-underline($blue, $yellow);
+    }
+  }
+
+  .field--name-field-skills-used {
+    @extend %skill-logos;
+  }
+}

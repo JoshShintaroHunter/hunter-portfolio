@@ -1,0 +1,31 @@
+uuid: 09f822fa-a0e3-4b04-8de8-66d7b362b1c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.clients
+    - field.storage.block_content.field_client_logos
+    - media.type.image
+    - media.type.logos
+id: block_content.clients.field_client_logos
+field_name: field_client_logos
+entity_type: block_content
+bundle: clients
+label: 'Client logos'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      logos: logos
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

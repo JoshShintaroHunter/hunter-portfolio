@@ -1,0 +1,53 @@
+// Global SCSS vars go here. (Colors, font sizes, etc.)
+// FONTS
+$basefont: 16;
+$content-max-width: 878px;
+$fontawesome: 'Font Awesome 6 Pro';
+$fontawesome-brands: 'Font Awesome 6 Brands';
+$font-display-special: 'Audiowide';
+$font-display: 'Oswald', sans-serif;
+$font-text: 'Gantari', sans-serif;
+
+$poly-fill-cover: 'object-fit:cover; object-position: center center;';
+
+//Colors
+$blue: #05056e;
+$blue-haze: rgba(9, 56, 211, 0.842);
+$yellow: #ffd300;
+
+//Grayscale
+$white: #fff;
+$white-haze: #ccc;
+$white-faded: rgba(250, 250, 250, 0.9);
+$grey-bg-lite: #f3f3f3;
+$lite-grey: #555;
+$grey: #222;
+$black: #000;
+
+//Shadows
+$box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.1);
+
+//Scroller
+
+//font-weight
+$three: 300;
+$four: 400;
+$five: 500;
+$six: 600;
+$seven: 700;
+$eight: 800;
+
+// Spacing and widths
+$container-padding-mobile: 24px;
+$container-padding-desk: 55px;
+$content-max-width: 800px;
+$container-max-width-narrow: 1340px;
+$container-max-width: 1400px;
+$container-max-width-lg: 1440px;
+
+// Borders
+$border-radius: 4px;
+
+//SVG
+$chevron-down: 'viewBox="0 0 448 512"%3E%3Cpath d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"';
+$a11y: 'viewBox="0 0 512 512"%3E%3Cpath d="M256 48c114.953 0 208 93.029 208 208 0 114.953-93.029 208-208 208-114.953 0-208-93.029-208-208 0-114.953 93.029-208 208-208m0-40C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 56C149.961 64 64 149.961 64 256s85.961 192 192 192 192-85.961 192-192S362.039 64 256 64zm0 44c19.882 0 36 16.118 36 36s-16.118 36-36 36-36-16.118-36-36 16.118-36 36-36zm117.741 98.023c-28.712 6.779-55.511 12.748-82.14 15.807.851 101.023 12.306 123.052 25.037 155.621 3.617 9.26-.957 19.698-10.217 23.315-9.261 3.617-19.699-.957-23.316-10.217-8.705-22.308-17.086-40.636-22.261-78.549h-9.686c-5.167 37.851-13.534 56.208-22.262 78.549-3.615 9.255-14.05 13.836-23.315 10.217-9.26-3.617-13.834-14.056-10.217-23.315 12.713-32.541 24.185-54.541 25.037-155.621-26.629-3.058-53.428-9.027-82.141-15.807-8.6-2.031-13.926-10.648-11.895-19.249s10.647-13.926 19.249-11.895c96.686 22.829 124.283 22.783 220.775 0 8.599-2.03 17.218 3.294 19.249 11.895 2.029 8.601-3.297 17.219-11.897 19.249z"';

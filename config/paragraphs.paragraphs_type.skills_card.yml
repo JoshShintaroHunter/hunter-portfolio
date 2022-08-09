@@ -1,0 +1,10 @@
+uuid: 60b5eef2-9a00-458c-ad61-6699bf58318c
+langcode: en
+status: true
+dependencies: {  }
+id: skills_card
+label: 'Skills card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: da688ff1-c278-45e9-ab18-e83d1e29faf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_summary
+    - paragraphs.paragraphs_type.work_experience
+  module:
+    - text
+id: paragraph.work_experience.field_summary
+field_name: field_summary
+entity_type: paragraph
+bundle: work_experience
+label: Summary
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

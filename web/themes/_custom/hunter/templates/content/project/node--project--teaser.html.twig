@@ -1,0 +1,30 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'teaser-card'
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <div{{ content_attributes.addClass('node__content') }}>
+    <div class="teaser-card__image" tabindex="0">
+      {{ content.field_teaser_image }}
+      {{ content.field_logo }}
+      {{ content.body }}
+    </div>
+    <div class="teaser-card__content">
+      <h3{{ title_attributes }}>{{ label }}</h3>
+      {{ content.field_skills_used }}
+    </div>
+    <div class="teaser-card__links">
+      <a href="{{ url }}">Project details</a>
+    </div>
+  </div>
+</article>

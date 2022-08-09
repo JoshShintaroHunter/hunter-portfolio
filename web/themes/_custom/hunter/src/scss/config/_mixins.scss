@@ -1,0 +1,196 @@
+@mixin mobile-only {
+  @media (max-width: #{map-get($grid-breakpoints, 'sm')}) {
+    @content;
+  }
+}
+
+@mixin mobile-up {
+  @media (min-width: #{map-get($grid-breakpoints, 'sm')}) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: #{map-get($grid-breakpoints, 'md') - 1}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: #{map-get($grid-breakpoints, 'md')}) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{map-get($grid-breakpoints, 'lg')}) {
+    @content;
+  }
+}
+
+@mixin desktop-xl-up {
+  @media (min-width: #{map-get($grid-breakpoints, 'xl')}) {
+    @content;
+  }
+}
+
+@mixin desktop-down {
+  @media (max-width: #{map-get($grid-breakpoints, 'lg') - 1}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-up($size) {
+  @if type-of($size) == string and map-get($grid-breakpoints, $size) {
+    @media (min-width: #{map-get($grid-breakpoints, $size)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn 'Mixin breakpoint-up argument needs to exist as a value in the $grid-breakpoints Sass map';
+  }
+}
+
+/**
+ * Mixin for cover-sized images, with object-fit-image polyfill bonus
+ */
+@mixin object-fit-cover {
+  object-fit: cover;
+  object-position: center center;
+  font-family: $poly-fill-Cover; //OFI polyfill
+}
+
+@mixin object-fit-fill {
+  object-fit: contain;
+  object-position: left center;
+  font-family: $poly-fill-Cover; //OFI polyfill
+}
+
+@mixin button-reset {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+//Font awesome
+@mixin fa-regular-icon($icon) {
+  @include fa-icon;
+  font-family: $fontawesome;
+  font-weight: 400;
+  content: quote($icon);
+}
+
+@mixin fa-solid-icon($icon) {
+  @include fa-icon;
+  font-family: $fontawesome;
+  font-weight: 900;
+  content: quote($icon);
+}
+
+@mixin fa-brand-icon($icon) {
+  font-family: $fontawesome-brands;
+  content: quote($icon);
+}
+
+// Convert px to rem
+@function rem($px) {
+  @return #{$px / $basefont}rem;
+}
+
+// SVG as background image
+@mixin svg($x, $y) {
+  background-image: url('data:image/svg+xml,%3Csvg version="1.1" fill="%23#{str-slice(#{$y}, 2)}" xmlns="http://www.w3.org/2000/svg" #{$x}/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+}
+
+// FOCUS VISIBLE
+@mixin focus-visible($color: null) {
+  @if ($color) {
+    outline: 2px solid $color;
+    outline-offset: 3px;
+  }
+
+  @else {
+    outline: 1px solid $black;
+    outline-offset: 3px;
+  }
+}
+
+@mixin expanding-underline($color: null, $underline_color: null) {
+  @if ($color) {
+    color: $color;
+
+    &::after {
+      background-color: $underline_color;
+    }
+  }
+
+  @else {
+    color: $lite-grey;
+
+    &::after {
+      background-color: $lite-grey;
+    }
+  }
+
+  display: inline-block;
+  text-decoration: none;
+
+  &::after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 2px;
+    transition: width linear 0.2s;
+  }
+
+  &.is-active,
+  &:hover,
+  &:focus-visible {
+    color: $blue;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &:focus-visible {
+    @include focus-visible($blue);
+
+    &::after {
+      width: 0;
+    }
+  }
+}
+
+// List styles reset
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin ratio-image($percent: null) {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @if ($percent) {
+    padding-bottom: $percent;
+  }
+
+  @else {
+    padding-bottom: 56.25%;
+  }
+}

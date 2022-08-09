@@ -1,0 +1,24 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "string-quotes": "single",
+    "selector-attribute-quotes": "always",
+    "function-url-quotes": "always",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "max-nesting-depth": 5,
+    "scss/selector-nest-combinators": "always",
+    "selector-max-id": 0,
+    "scss/dollar-variable-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+    "scss/at-function-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+    "scss/at-mixin-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+    "scss/percent-placeholder-pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+    "declaration-no-important": true,
+    "declaration-empty-line-before": null,
+    "no-descending-specificity": null,
+    "scss/selector-nest-combinators": null
+  }
+}

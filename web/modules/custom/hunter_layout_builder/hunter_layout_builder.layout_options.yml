@@ -1,0 +1,47 @@
+layout_option_definitions:
+  layout_breakout:
+    title: 'Breakout content?'
+    description: 'Content will span width of whole window'
+    default: ''
+    plugin: layout_options_class_select  # A plugin that handles select form based class attributes.
+    multi: false  #select multiple options?
+    options:    # The select options shown
+      layout-normal: 'No'
+      layout-breakout: 'Yes'
+    layout: true  # allow this option to be using in the overall layout container
+    regions: false # allow this option to be used in any regions
+    weight: -200 #optional -  Define option order in configuration form.
+  layout_mb_bottom:
+    title: 'Spacing below'
+    description: 'The spacing below this section'
+    default: ''
+    plugin: layout_options_class_select  # A plugin that handles select form based class attributes.
+    multi: false  #select multiple options?
+    options:    # The select options shown
+      # mb-small: 'Small (32px)'
+      mb-default: 'Default (64px)'
+      mb-medium: 'Medium (82px)'
+      # mb-large: 'Large (120px)'
+    layout: true  # allow this option to be using in the overall layout container
+    regions: false # allow this option to be used in any regions
+    weight: -50 #optional -  Define option order in configuration form.
+  layout_background:
+    title: 'Background color'
+    description: 'A grey background will be applied to this section'
+    default: ''
+    plugin: layout_options_class_select  # A plugin that handles select form based class attributes.
+    multi: false  #select multiple options?
+    options:    # The select options shown
+      layout-normal: 'No'
+      layout-grey: 'Grey'
+      layout-blue: 'Blue'
+      layout-gradient: 'Gradient'
+    layout: true  # allow this option to be using in the overall layout container
+    regions: false # allow this option to be used in any regions
+    weight: -100 #optional -  Define option order in configuration form.
+layout_options:
+  global:
+    layout_breakout: {}
+    layout_mb_bottom: {}
+    layout_background : {}
+

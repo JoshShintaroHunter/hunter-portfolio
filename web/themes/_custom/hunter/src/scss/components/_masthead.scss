@@ -1,0 +1,61 @@
+.masthead-basic {
+  @extend %hesh-container;
+
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $white;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, 0);
+    background: $blue;
+  }
+
+  .field--name-field-hero-headline {
+    max-width: 800px;
+
+    p {
+      font-family: $font-display;
+      font-size: rem(28);
+    }
+  }
+}
+
+.node--type-resume {
+  .masthead-basic {
+    @include tablet-up {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .download-wrap {
+    padding: 12px;
+    color: $blue;
+    background-color: $white-faded;
+    border-radius: $border-radius;
+
+    > span {
+      @extend %h5;
+      margin-bottom: 16px;
+      display: block;
+      text-transform: uppercase;
+    }
+
+    .file--application-pdf {
+      padding: 0;
+      background: none;
+
+      a {
+        @extend %btn;
+      }
+    }
+  }
+}

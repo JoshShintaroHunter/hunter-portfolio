@@ -1,0 +1,29 @@
+uuid: 56aba81d-21fe-4e38-9d92-1eb1972913eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_technologies_used
+    - paragraphs.paragraphs_type.work_experience
+    - taxonomy.vocabulary.skills
+id: paragraph.work_experience.field_technologies_used
+field_name: field_technologies_used
+entity_type: paragraph
+bundle: work_experience
+label: 'Technologies used'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      skills: skills
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

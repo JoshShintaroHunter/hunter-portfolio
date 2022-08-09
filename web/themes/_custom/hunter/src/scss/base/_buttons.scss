@@ -1,0 +1,18 @@
+%btn {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: rem(16);
+  font-weight: 500;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: $blue;
+  background: $yellow;
+  border-radius: $border-radius;
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: $yellow;
+    background: $blue;
+  }
+}

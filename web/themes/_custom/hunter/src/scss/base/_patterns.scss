@@ -1,0 +1,359 @@
+// Headers
+%basic-header {
+  h2 {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+}
+
+%block-header {
+  margin: 0 0 16px;
+
+  @include tablet-up {
+    h2 {
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
+
+    h3 {
+      margin-bottom: 12px;
+    }
+
+    a {
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+%block-header-flexed {
+  @include tablet-up {
+    @include make-row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin: 0 0 16px;
+  }
+}
+
+// Slider view mode
+%slider-view-mode {
+  header,
+  .sub-header {
+    @extend %block-header;
+  }
+
+  header {
+    @extend %block-header-flexed;
+  }
+}
+
+// Skill logos
+%skill-logos {
+  @include make-row;
+  flex-wrap: wrap;
+  margin: 0 -2px;
+
+  > .field__item {
+    margin: 0 4px;
+    padding: 2px 6px;
+    font-weight: bold;
+    font-size: rem(14);
+    color: $white;
+    background-color: $lite-grey;
+    border-radius: 20px;
+  }
+}
+
+// Special effects
+%expanding-top-bottom {
+  color: $yellow;
+
+  &::before,
+  &::after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: $yellow;
+    transition: width linear 0.2s;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $yellow;
+
+    &::before,
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &:focus-visible {
+    @include focus-visible($blue);
+
+    &::before,
+    &::after {
+      width: 0;
+    }
+  }
+}
+
+// Flex cards
+%flex-cards-three {
+  margin-bottom: 32px;
+
+  > .field__item,
+  > .views-row {
+    margin-bottom: 32px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    > article {
+      box-shadow: $box-shadow;
+    }
+  }
+
+  @include tablet-up {
+    @include make-row;
+    margin: 0 -16px 32px;
+
+    > .field__item,
+    > .views-row {
+      @include make-col(4);
+      display: flex;
+      margin: 0;
+      padding: 0 16px;
+
+      > article {
+        flex: 1;
+      }
+    }
+  }
+}
+
+%flex-cards-three-grid {
+  > .field__item,
+  > .views-row {
+    margin-bottom: 32px;
+
+    > article {
+      box-shadow: $box-shadow;
+    }
+  }
+
+  @include tablet-up {
+    @include make-row;
+    margin: 0 -16px 32px;
+
+    > .field__item,
+    > .views-row {
+      @include make-col(4);
+      display: flex;
+      padding: 0 16px;
+
+      > article {
+        flex: 1;
+      }
+    }
+  }
+}
+
+//Teaser card
+%teaser-card {
+  overflow: hidden;
+  border-radius: $border-radius;
+
+  .teaser-card__image {
+    position: relative;
+    overflow: hidden;
+
+    &:hover,
+    &:focus-visible {
+      .field--name-field-logo {
+        img {
+          opacity: 0;
+        }
+      }
+
+      .field--name-body {
+        height: 100%;
+      }
+    }
+
+    .field--name-field-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.438);
+
+      * {
+        width: 100%;
+        height: 100%;
+      }
+
+      .field--name-field-media-image-1 {
+        .field__item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        img {
+          width: auto;
+          max-height: 100px;
+          max-width: 200px;
+          margin: 0 auto;
+          filter: brightness(0) invert(1);
+          transition: opacity linear 0.3s;
+        }
+      }
+    }
+
+    .field--name-body {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      margin-bottom: 0;
+      z-index: 1;
+      transition: height linear 0.3s;
+      color: $white;
+      background-color: $blue-haze;
+
+      p {
+        padding: 20px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .teaser-card__content {
+    padding: 20px;
+    background-color: $white;
+  }
+
+  .teaser-card__links {
+    padding: 0 20px 20px;
+    background-color: $white;
+
+    a {
+      @include expanding-underline($blue, $yellow);
+      font-size: rem(14);
+      color: $lite-grey;
+    }
+  }
+
+  img {
+    max-height: 300px;
+  }
+
+  .field--name-field-skills-used {
+    @extend %skill-logos;
+  }
+}
+
+// Social media icons based on url
+%social-media-link {
+  display: block;
+  text-decoration: none;
+  background-color: transparent;
+
+  @include tablet-up {
+    justify-content: center;
+  }
+
+  &::before {
+    margin-right: 8px;
+    font-size: rem(20);
+    vertical-align: middle;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    @include focus-visible($white);
+  }
+
+  &[href*='instagram'] {
+    &::before {
+      @include fa-brand-icon($fa-var-instagram);
+    }
+  }
+
+  &[href*='vimeo'] {
+    &::before {
+      @include fa-brand-icon($fa-var-vimeo-v);
+      margin-left: 0;
+    }
+  }
+
+  &[href*='facebook'] {
+    &::before {
+      @include fa-brand-icon($fa-var-facebook-square);
+    }
+  }
+
+  &[href*='linkedin'] {
+    &::before {
+      @include fa-brand-icon($fa-var-linkedin);
+    }
+  }
+
+  &[href*='twitter'] {
+    &::before {
+      @include fa-brand-icon($fa-var-twitter);
+    }
+  }
+
+  &[href*='youtube'] {
+    &::before {
+      @include fa-brand-icon($fa-var-youtube);
+      margin-left: 0;
+    }
+  }
+
+  &[href*='github'] {
+    &::before {
+      @include fa-brand-icon($fa-var-github-square);
+      margin-left: 0;
+    }
+  }
+
+  &[href*='mailto'] {
+    &::before {
+      @include fa-solid-icon($fa-var-envelope);
+      margin-left: -4px;
+    }
+  }
+
+  &[href*='tel'] {
+    &::before {
+      @include fa-solid-icon($fa-var-mobile);
+    }
+  }
+
+  &[href*='pdf'],
+  &[href*='docx'] {
+    &::before {
+      @include fa-solid-icon($fa-var-file-pdf);
+      margin-left: 6px;
+    }
+  }
+}

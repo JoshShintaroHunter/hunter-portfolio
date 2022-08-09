@@ -1,0 +1,12 @@
+name: Hunter Layout Builder
+type: module
+description: Enhancements and overrides for layout builder
+core_version_requirement: ^8 || ^9
+package: custom
+dependencies:
+  - layout_builder
+  - layout_options
+  - layout_builder_restrictions
+libraries:
+  - overrides
+  - classy/file

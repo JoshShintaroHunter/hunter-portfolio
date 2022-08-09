@@ -1,0 +1,46 @@
+uuid: edbf3b44-b134-4056-bcfc-f45f635c5c8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.resume_header.field_headshot
+    - field.field.paragraph.resume_header.field_info
+    - field.field.paragraph.resume_header.field_social_media
+    - paragraphs.paragraphs_type.resume_header
+  module:
+    - link
+    - text
+id: paragraph.resume_header.default
+targetEntityType: paragraph
+bundle: resume_header
+mode: default
+content:
+  field_headshot:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_info:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_social_media:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

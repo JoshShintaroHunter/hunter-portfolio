@@ -1,0 +1,42 @@
+uuid: 4a0a405c-13a5-4488-9e70-ff138749f919
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.clients
+    - field.field.block_content.clients.body
+    - field.field.block_content.clients.field_client_logos
+  module:
+    - media_library
+    - text
+id: block_content.clients.default
+targetEntityType: block_content
+bundle: clients
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 2
+      summary_rows: 1
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_client_logos:
+    type: media_library_widget
+    weight: 27
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

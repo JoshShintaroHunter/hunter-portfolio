@@ -1,0 +1,22 @@
+uuid: e035a21c-f7da-4c4d-bf0f-6216c111ff2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hunter
+_core:
+  default_config_hash: a0Yyx1GeyKarZ4T_yXQBR_ZFKnXiFLtxAb6gWLd8nr0
+id: hunter_content
+theme: hunter
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

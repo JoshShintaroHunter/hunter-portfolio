@@ -1,0 +1,36 @@
+global:
+  version: VERSION
+  css:
+    base:
+      dist/css/global.css: { preprocess: 0 }
+  js:
+    dist/js/global.js: { preprocess: 0 }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - hunter/bootstrap_js
+    - core/drupal
+
+global_stage:
+  version: VERSION
+  css:
+    base:
+      dist-stage/css/global.css: { preprocess: 0 }
+  js:
+    dist-stage/js/global.js: { preprocess: 0 }
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+
+bootstrap_js:
+  js:
+    node_modules/popper.js/dist/umd/popper.min.js: {}
+    node_modules/bootstrap/dist/js/bootstrap.min.js: {}
+    node_modules/slick-slider/slick/slick.min.js: {}
+
+# web_fonts:
+#   css:
+#     base:
+#       '//fonts.googleapis.com/css?family=Audiowide&display=swap': { external: true }
+#       '//fonts.googleapis.com/css2?family=Gantari:wght@300;400;500&display=swap': { external: true }

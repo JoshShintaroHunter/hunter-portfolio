@@ -1,0 +1,5 @@
+.view-projects-listing {
+  >.view-content {
+    @extend %flex-cards-three-grid;
+  }
+}

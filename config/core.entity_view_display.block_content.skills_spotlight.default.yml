@@ -1,0 +1,33 @@
+uuid: b93857aa-b1c0-4cc2-b1e3-d6e2a097d800
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.skills_spotlight
+    - field.field.block_content.skills_spotlight.body
+    - field.field.block_content.skills_spotlight.field_skills
+  module:
+    - entity_reference_revisions
+    - text
+id: block_content.skills_spotlight.default
+targetEntityType: block_content
+bundle: skills_spotlight
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_skills:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

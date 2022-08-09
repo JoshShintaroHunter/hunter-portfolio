@@ -1,0 +1,8 @@
+uuid: e15322ac-685d-419f-b662-5d15eb687ae6
+langcode: en
+status: true
+dependencies: {  }
+id: clients
+label: Clients
+revision: 0
+description: 'A list of clients displayed as company logos'

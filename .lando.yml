@@ -1,0 +1,35 @@
+name: hunter-portfolio
+recipe: drupal9
+config:
+  webroot: web
+services:
+  node:
+    type: node:16
+tooling:
+  push: disabled
+  switch: disabled
+  pull:
+    description: Pull things except code
+    options:
+      code:
+        default: none
+      database:
+        default: dev
+      files:
+        default: dev
+  node:
+    service: node
+  front-end:
+    service: node
+    description: Installs dependencies for the front-end and builds the CSS
+    cmd: cd web/themes/_custom/hunter && npm install && npm run build
+  front-end-stage:
+    service: node
+    description: Installs dependencies for the front-end and builds the CSS
+    cmd: cd web/themes/_custom/hunter && npm install && npm run build-stage
+  front-end-watch:
+    service: node
+    description: Runs lando front-end task and watch task, builds CSS and JS on changes
+    cmd:
+      - echo "Starting watch task. Press Ctrl + C to exit."
+      - cd web/themes/_custom/hunter && npm install && npm run watch

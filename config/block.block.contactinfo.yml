@@ -1,0 +1,25 @@
+uuid: 6a1697c5-e30a-41bb-86f9-193d64b093a2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1f810fc3-39ec-4ed0-a84d-a4f588877d6a'
+  module:
+    - block_content
+  theme:
+    - hunter
+id: contactinfo
+theme: hunter
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:1f810fc3-39ec-4ed0-a84d-a4f588877d6a'
+settings:
+  id: 'block_content:1f810fc3-39ec-4ed0-a84d-a4f588877d6a'
+  label: 'Contact info'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

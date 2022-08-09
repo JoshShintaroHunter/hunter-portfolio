@@ -1,0 +1,22 @@
+uuid: 7b711bb0-4008-4738-90f3-8bd0865cc96b
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - hunter
+_core:
+  default_config_hash: jccFSSVqV0WCDb6NtML1VWAWTtDbZ-zn5YgTRMgMrIM
+id: hunter_help
+theme: hunter
+region: alert
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

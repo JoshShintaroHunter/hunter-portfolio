@@ -1,0 +1,33 @@
+uuid: 590b9cde-c521-47f0-9e2a-f5e38dcbf5b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spotlight
+    - field.storage.block_content.field_spotlight_image
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+id: block_content.spotlight.field_spotlight_image
+field_name: field_spotlight_image
+entity_type: block_content
+bundle: spotlight
+label: 'Spotlight image'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

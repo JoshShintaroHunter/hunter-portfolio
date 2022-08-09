@@ -1,0 +1,202 @@
+.layout-builder-form {
+  padding-top: 10px;
+
+  .form-actions,
+  .form-type-vertical-tabs,
+  .layout-builder__message {
+    max-width: $container-max-width;
+    margin: 0 auto;
+  }
+
+  .form-type-vertical-tabs {
+    .vertical-tabs {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  [id='edit-submit'],
+  [id='edit-discard-changes'],
+  [id='edit-revert'] {
+    margin-right: 15px;
+  }
+}
+
+.layout-builder-configure-block {
+  input[type='text'] {
+    max-width: 100%;
+    width: auto;
+  }
+}
+
+.layout-builder__link {
+  +.layout-breakout {
+    width: 100%;
+  }
+}
+
+.layout-builder__message--overrides {
+  .messages {
+    padding-left: 20px;
+  }
+}
+
+.layout-builder__section {
+  .layout-builder__add-block {
+    width: 100%;
+    clear: both;
+  }
+}
+
+.layout-builder__add-section,
+.layout-builder__region {
+  outline-color: $blue;
+}
+
+[id='drupal-off-canvas'] {
+  .layout-builder-configure-section,
+  .layout-builder-remove-section {
+    button[type='submit'] {
+      span {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.ui-widget {
+  &:not(.ui-dialog-position-side) {
+    border-radius: 0;
+
+    .ui-dialog-title {
+      color: $grey;
+    }
+  }
+}
+
+.layout-builder-configure-block,
+.media-library-widget-modal {
+  font-size: rem(16);
+  color: $grey;
+
+  .form-item-settings-admin-label {
+    label {
+      display: block;
+    }
+  }
+
+  .media-library-menu,
+  .view-id-media_library {
+    a {
+      color: $blue;
+      text-decoration: underline;
+    }
+
+    .active,
+    .is-active {
+      font-weight: bold;
+    }
+  }
+
+  input,
+  select {
+    color: $grey;
+    border: 1px solid $lite-grey;
+    border-radius: 0;
+  }
+
+  .form-item {
+    margin-bottom: 12px;
+  }
+
+  .form-type-select {
+    label {
+      display: block;
+    }
+
+    select {
+      cursor: pointer;
+      height: 30px;
+      padding: 4px 10px;
+      padding-right: 42px;
+    }
+  }
+
+  h4 {
+    font-weight: normal;
+    font-size: rem(24);
+  }
+
+  button,
+  .button,
+  .button--primary,
+  .tabledrag-toggle-weight,
+  .js-media-library-open-button {
+    cursor: pointer;
+    border-radius: 0;
+  }
+
+  [value='Remove'] {
+    margin-bottom: 12px;
+  }
+
+  input {
+    &[type='file'] {
+      border: 0;
+    }
+  }
+
+  table {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  tr {
+    border-bottom: 1px solid $lite-grey;
+
+    &:last-of-type {
+      border: 0;
+    }
+
+    th {
+      padding: 0 10px;
+      color: $grey;
+    }
+
+    td {
+      padding: 10px 0;
+      padding-right: 10px;
+      vertical-align: top;
+    }
+  }
+}
+
+// Temp fix to prevent multiple image selection
+.media-library-item--disabled {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(250, 250, 250, 0.6);
+  }
+}
+
+[role='contentinfo'].messages--error {
+  [role='alert'] {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+[id='editor-link-dialog-form'] {
+  + .ui-autocomplete {
+    position: relative;
+    max-width: 494px;
+    max-height: 250px;
+  }
+}

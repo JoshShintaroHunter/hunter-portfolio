@@ -1,0 +1,8 @@
+uuid: 5a56952e-8362-4cc2-af3f-97015f0068b4
+langcode: en
+status: true
+dependencies: {  }
+id: spotlight
+label: Spotlight
+revision: 0
+description: '50/50 block with image and text, can change order of blocks'

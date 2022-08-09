@@ -1,0 +1,60 @@
+uuid: 30e9d30d-0a03-45fa-a563-3306453b0d13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.skills.field_bucket
+    - field.field.taxonomy_term.skills.field_logo
+    - taxonomy.vocabulary.skills
+  module:
+    - media_library
+    - path
+    - text
+id: taxonomy_term.skills.default
+targetEntityType: taxonomy_term
+bundle: skills
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_bucket:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_logo:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

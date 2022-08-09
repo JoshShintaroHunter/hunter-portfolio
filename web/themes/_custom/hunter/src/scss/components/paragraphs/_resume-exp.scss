@@ -1,0 +1,32 @@
+.paragraph--type--work-experience {
+  .exp-header {
+    @include tablet-up {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+
+      h3 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .field--name-field-position {
+    @extend %h3;
+
+    font-size: rem(22);
+    line-height: 1;
+  }
+
+  .field--name-field-duration {
+    margin-bottom: 8px;
+    font-style: italic;
+    font-size: rem(14);
+    color: $lite-grey;
+  }
+
+  .field--name-field-technologies-used {
+    @extend %skill-logos;
+  }
+}

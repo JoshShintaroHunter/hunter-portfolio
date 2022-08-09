@@ -1,0 +1,13 @@
+<div class="site-wrapper">
+  {% include '@hunter/layout/header.html.twig' %}
+  {{ page.help }}
+  {{ page.admin_area }}
+  <main role="main" class="{{ node_type != 'blog' ? 'site-wrap'}}">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+    <div class="container">
+      {{ page.above_content }}
+      {{ page.content }}
+    </div>{# /.layout-content #}
+  </main>
+  {% include '@hunter/layout/footer.html.twig' %}
+</div>

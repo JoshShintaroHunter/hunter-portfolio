@@ -1,0 +1,78 @@
+#Full (container)
+layout_hunter_full:
+  label: 'Full (Container width)'
+  category: 'SD Layouts'
+  path: layouts
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  template: full
+  default_region: main
+  regions:
+    main:
+      label: 'Main'
+  icon_map:
+    - [edge, main, main, main, main, main, main, main, main, main, main, main, main, edge]
+
+# 2 / 8 / 2
+layout_hunter_large:
+  label: 'Large Centered (85% container width, centered)'
+  category: 'SD Layouts'
+  path: layouts
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  template: large
+  default_region: main
+  regions:
+    main:
+      label: 'Main'
+  icon_map:
+    - [edge, gap, gap, main, main, main, main, main, main, main, main, gap, gap, edge]
+
+# # 6 / 6
+# layout_sd_halves:
+#   label: '[1/2] [1/2] (Container width)'
+#   category: 'SD Layouts'
+#   path: layouts
+#   class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+#   template: halves
+#   default_region: left
+#   regions:
+#     left:
+#       label: 'Left'
+#     right:
+#       label: 'Right'
+#   icon_map:
+#     - [edge, left, left, left, left, left, left, right, right, right, right, right, right, edge]
+
+# # 8 / 4
+# layout_sd_two_third_one_third:
+#   label: '[2/3] [1/3] (Container width)'
+#   category: 'SD Layouts'
+#   path: layouts
+#   class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+#   template: two_third_one_third
+#   default_region: left
+#   regions:
+#     left:
+#       label: 'Left'
+#     right:
+#       label: 'Right'
+#   icon_map:
+#     - [edge, left, left, left, left, left, left, left, left, right, right, right, right, edge]
+
+
+# # 4 / 8
+# layout_sd_one_third_two_third:
+#   label: '[1/3] [2/3] (Container width)'
+#   category: 'SD Layouts'
+#   path: layouts
+#   class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+#   template: one_third_two_third
+#   default_region: left
+#   regions:
+#     left:
+#       label: 'Left'
+#     right:
+#       label: 'Right'
+#   icon_map:
+#     - [edge, left, left, left, left, right, right, right, right, right, right, right, right, edge]
+
+

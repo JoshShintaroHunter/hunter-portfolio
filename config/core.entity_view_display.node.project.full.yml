@@ -1,0 +1,98 @@
+uuid: e51ecde0-f098-4ad0-bd67-63d6dd456899
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.project.body
+    - field.field.node.project.field_logo
+    - field.field.node.project.field_project_images
+    - field.field.node.project.field_project_link
+    - field.field.node.project.field_skills_used
+    - field.field.node.project.field_teaser_image
+    - node.type.project
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      blacklisted_blocks: {  }
+      whitelisted_blocks:
+        'Content fields': {  }
+      restricted_categories:
+        - 'Chaos Tools'
+        - 'Custom blocks'
+        - Devel
+        - Forms
+        - Help
+        - Menus
+        - System
+        - User
+        - core
+id: node.project.full
+targetEntityType: node
+bundle: project
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_logo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_project_images:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_project_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_skills_used:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_teaser_image: true
+  layout_builder__layout: true

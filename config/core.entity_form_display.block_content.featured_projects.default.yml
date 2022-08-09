@@ -1,0 +1,42 @@
+uuid: a68c33cd-59bb-4cd9-8aec-b98bbb35436e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_projects
+    - field.field.block_content.featured_projects.field_projects
+    - field.field.block_content.featured_projects.field_view_all_link
+  module:
+    - link
+id: block_content.featured_projects.default
+targetEntityType: block_content
+bundle: featured_projects
+mode: default
+content:
+  field_projects:
+    type: entity_reference_autocomplete
+    weight: 26
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_view_all_link:
+    type: link_default
+    weight: 27
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

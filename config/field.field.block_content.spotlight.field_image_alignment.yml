@@ -1,0 +1,23 @@
+uuid: e12a27f3-0987-4594-bc38-1d97c2427a6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spotlight
+    - field.storage.block_content.field_image_alignment
+  module:
+    - options
+id: block_content.spotlight.field_image_alignment
+field_name: field_image_alignment
+entity_type: block_content
+bundle: spotlight
+label: 'Image alignment'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: image-right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

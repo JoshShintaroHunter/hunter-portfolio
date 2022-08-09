@@ -1,0 +1,44 @@
+uuid: 132683ba-fbc4-43b0-942d-7d39bc163e61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.resume_header.field_headshot
+    - field.field.paragraph.resume_header.field_info
+    - field.field.paragraph.resume_header.field_social_media
+    - paragraphs.paragraphs_type.resume_header
+  module:
+    - link
+    - media_library
+    - text
+id: paragraph.resume_header.default
+targetEntityType: paragraph
+bundle: resume_header
+mode: default
+content:
+  field_headshot:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_info:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_social_media:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

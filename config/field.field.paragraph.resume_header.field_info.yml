@@ -1,0 +1,21 @@
+uuid: 979b679b-09d4-4373-ba17-59ff219017c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_info
+    - paragraphs.paragraphs_type.resume_header
+  module:
+    - text
+id: paragraph.resume_header.field_info
+field_name: field_info
+entity_type: paragraph
+bundle: resume_header
+label: Info
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

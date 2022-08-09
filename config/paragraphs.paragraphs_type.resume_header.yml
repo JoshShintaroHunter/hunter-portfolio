@@ -1,0 +1,10 @@
+uuid: 45e3591f-0c82-4056-99be-9befa3c73d1c
+langcode: en
+status: true
+dependencies: {  }
+id: resume_header
+label: 'Resume header'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

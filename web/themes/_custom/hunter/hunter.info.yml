@@ -1,0 +1,39 @@
+name: hunter
+type: theme
+description: 'Hunter Porfolio Site'
+base theme: classy
+core_version_requirement: ^8 || ^9
+version: VERSION
+libraries-override:
+  #####################################
+  # Disable core front-end libraries
+  #####################################
+  # core/modernizr: false #we are including a custom modernizr build
+  core/html5shiv: false #html5shiv is included with our modernizr build
+  core/normalize: false #covered by bootstrap
+  #####################################
+  # Disable classy front-end libraries
+  #####################################
+  classy/base: false
+  classy/book-navigation: false
+  classy/forum: false
+  classy/image-widget: false
+  classy/indented: false
+  classy/messages: false
+  classy/node: false
+  classy/search-results: false
+  filter/caption: false
+
+# Apply custom styles to ckeditor
+ckeditor_stylesheets:
+  - dist/css/global.css
+
+regions:
+  alert: 'Alert'
+  admin_area: 'Admin Area'
+  branding: 'Site branding'
+  primary_menu: 'Primary Menu'
+  above_content: 'Above Content'
+  content: 'Content'
+  footer: 'Footer'
+  disabled: 'Disabled'

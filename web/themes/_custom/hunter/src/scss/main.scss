@@ -1,0 +1,52 @@
+@charset 'UTF-8';
+
+// Font Awesome
+@import '~slick-slider/slick/slick';
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import 'config/fonts';
+@import 'config/variables';
+@import 'config/mixins';
+@import 'config/transitions';
+
+// Custom bootstrap variable overrides
+@import 'config/bootstrap-config';
+@import 'config/bootstrap-imports';
+
+// Base styles
+@import 'base/buttons';
+@import 'base/typography';
+@import 'base/patterns';
+
+// Basic elements and structure
+
+// COMPONENTS
+@import 'components/masthead';
+@import 'components/navigation/admin-ui';
+@import 'components/navigation/primary-nav';
+@import 'components/navigation/breadcrumb';
+@import 'components/navigation/footer';
+
+//Blocks
+@import 'components/blocks/slider';
+@import 'components/blocks/spotlight';
+@import 'components/blocks/featured-projects';
+@import 'components/blocks/skills-spotlight';
+@import 'components/blocks/clients';
+@import 'components/blocks/project-listing';
+
+// Content
+@import 'content/project';
+@import 'content/resume';
+
+// Paragraphs
+@import 'components/paragraphs/resume-header';
+@import 'components/paragraphs/resume-exp';
+
+// LAYOUT BUILDER
+@import 'layout-builder/container';
+@import 'layout-builder/layout';
+@import 'layout-builder/layout-ui';

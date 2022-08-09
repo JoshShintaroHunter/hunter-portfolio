@@ -1,0 +1,31 @@
+{% set empty = true %}
+{% for region in regions %}
+  {%  if content[region] %}
+    {%  set empty = false %}
+  {% endif %}
+{% endfor %}
+{%
+set class = [
+  'lb-section',
+  section_class ? 'lb-section--' ~ section_class,
+  empty ? 'empty'
+]
+%}
+{% block lb_region %}
+<section {{ attributes.addClass(class) }}>
+  {% block region_body %}
+  <div class="lb-section-row region-body">
+    {% for region in regions %}
+      {% if content[region] %}
+        <div {{region_attributes[region].addClass(['lb-region', 'lb-region--' ~ region|clean_class])}}>
+          {{ content[region] }}
+        </div>
+      {% else %}
+        {# Use an empty region as placeholder around other blocks #}
+        <div class="empty lb-region lb-region--{{region|clean_class}}"></div>
+      {% endif %}
+    {% endfor %}
+    </div>
+  {% endblock %}
+</section>
+{% endblock %}

@@ -1,0 +1,21 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <div class="exp-header">
+        <h3>{{ content.field_position }}</h3>
+        {{ content.field_company }}
+      </div>
+      {{ content.field_duration }}
+      {{ content.field_summary }}
+      {{ content.field_technologies_used }}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

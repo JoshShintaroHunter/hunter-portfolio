@@ -1,0 +1,29 @@
+uuid: 755fb694-ed57-4337-9806-9a0d57426797
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_skill_bucket_icon
+    - media.type.logos
+    - paragraphs.paragraphs_type.skills_card
+id: paragraph.skills_card.field_skill_bucket_icon
+field_name: field_skill_bucket_icon
+entity_type: paragraph
+bundle: skills_card
+label: 'Skill bucket icon'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      logos: logos
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

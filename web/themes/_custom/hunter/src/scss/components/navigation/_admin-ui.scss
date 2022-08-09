@@ -1,0 +1,33 @@
+/* Admin nav ———————————————————————————————————————————————————————————————— */
+.region-admin-area {
+  background-color: $white;
+}
+
+.tabs {
+  @extend %hesh-container;
+
+  ul {
+    @include list-reset;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px 0;
+
+    li {
+      margin-right: 20px;
+      margin-bottom: 0;
+
+      a {
+        font-size: rem(16);
+      }
+    }
+  }
+}
+
+.node-layout-builder-form {
+  @extend %hesh-container;
+}
+
+.user-login-form {
+  max-width: 400px;
+}

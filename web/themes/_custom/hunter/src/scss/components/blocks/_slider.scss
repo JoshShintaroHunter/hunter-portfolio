@@ -1,0 +1,261 @@
+.block-inline-blockproject-slider {
+  @include desktop-up {
+    .field--name-field-projects {
+      @include make-row;
+      margin: 0 -32px;
+
+      > .field__item {
+        @include make-col(4);
+        display: flex;
+        padding: 0 32px;
+
+        > article {
+          flex: 1;
+          box-shadow: $box-shadow;
+        }
+      }
+    }
+  }
+
+  .field--name-field-view-all-link {
+    padding: 16px 0;
+    text-align: center;
+  }
+
+  .field--name-field-skills-used {
+    @extend %skill-logos;
+  }
+}
+
+// SLICK
+$slick-font-path: '~slick-slider/slick/fonts/';
+$slick-loader-path: '~slick-slider/slick/';
+
+@import '~slick-slider/slick/slick';
+// @import '~slick-carousel/slick/slick-theme.scss';
+
+$slick-font-family: $fontawesome;
+$slick-arrow-color: $white;
+$slick-dot-color: $grey;
+$slick-dot-color-active: $red;
+$slick-prev-character: '\f104';
+$slick-next-character: '\f105';
+$slick-dot-character: '\2022';
+$slick-dot-size: 24px;
+$slick-opacity-default: 0.75;
+$slick-opacity-on-hover: 1;
+$slick-opacity-not-active: 0.25;
+
+.slick-slider {
+  .slick-track {
+    @include tablet-up {
+      display: flex;
+    }
+  }
+
+  .slick-list {
+    padding: 0 0 20px;
+    overflow: hidden;
+
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   width: 80px;
+    //   height: 100%;
+    //   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 87%);
+    // }
+  }
+}
+
+.slick-wrap {
+  margin-bottom: 56px;
+
+  img {
+    box-shadow: $box-shadow;
+  }
+}
+
+.slick-slide {
+  height: inherit;
+  padding: 0 15px;
+
+  figcaption {
+    padding-top: 16px;
+    text-align: center;
+  }
+
+  > div,
+  figure,
+  article,
+  .field--name-field-media-video-file,
+  .field--name-field-media-video-file .field__item {
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  img,
+  video {
+    width: auto;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    box-shadow: $box-shadow;
+
+    @include mobile-up {
+      max-width: 100%;
+      max-height: 400px;
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+.slick-list {
+  margin: 0 -15px;
+  overflow: visible;
+}
+
+// Arrows
+.slick-prev,
+.slick-next {
+  @include button-reset;
+
+  width: 32px;
+  height: 32px;
+  font-size: 0;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+
+    &::before {
+      color: $blue;
+    }
+
+    @include tablet-up {
+      &::before {
+        color: $blue;
+      }
+    }
+  }
+
+  &.slick-disabled::before {
+    color: $lite-grey;
+    opacity: $slick-opacity-not-active;
+  }
+
+  &::before {
+    font-size: rem(16);
+    line-height: 1;
+    color: $blue;
+    opacity: 1;
+  }
+
+  .slick-arrow-label {
+    @extend .slick-visuallyhidden !optional;
+  }
+}
+
+.slick-prev {
+  &::before {
+    @include fa-regular-icon($fa-var-chevron-left);
+
+    [dir='rtl'] & {
+      content: $slick-next-character;
+    }
+  }
+}
+
+.slick-next {
+  &::before {
+    @include fa-regular-icon($fa-var-chevron-right);
+
+    [dir='rtl'] & {
+      content: $slick-prev-character;
+    }
+  }
+}
+
+// Dots
+.slick-dots {
+  @include list-reset;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 16px;
+
+  @include tablet-up {
+    margin: 0 32px;
+  }
+
+  li {
+    display: flex;
+    margin: 0 8px;
+
+    button {
+      @include button-reset;
+      font-size: 0;
+      width: 16px;
+      height: 16px;
+      flex: none;
+      border: 2px solid $blue;
+      border-radius: 50%;
+
+      &:hover,
+      &:focus {
+        opacity: $slick-opacity-on-hover;
+      }
+
+      &:active {
+        background-color: $blue;
+        border-color: $blue;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &.slick-active button {
+      background-color: $blue;
+      border-color: $blue;
+    }
+  }
+}
+
+.button-wrapper {
+  @extend %hesh-container;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  .slick-prev {
+    order: 1;
+  }
+
+  .slick-dots {
+    display: none;
+  }
+
+  .counter {
+    display: flex;
+    margin: 0 16px;
+    order: 2;
+    color: $lite-grey;
+    font-size: rem(18);
+
+    span {
+      display: block;
+      width: 16px;
+    }
+  }
+
+  .slick-next {
+    order: 3;
+  }
+}

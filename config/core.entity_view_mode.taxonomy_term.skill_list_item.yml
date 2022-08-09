@@ -1,0 +1,10 @@
+uuid: 4ae2a7e8-1e01-4595-81c3-c087d8106b6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.skill_list_item
+label: 'Skill list item'
+targetEntityType: taxonomy_term
+cache: true

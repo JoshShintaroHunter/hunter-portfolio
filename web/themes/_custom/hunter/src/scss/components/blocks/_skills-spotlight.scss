@@ -1,0 +1,96 @@
+.block-inline-blockskills-spotlight {
+  @extend %basic-header;
+
+  h2,
+  .field--name-body {
+    text-align: center;
+  }
+
+  .field--name-body {
+    max-width: $content-max-width;
+    margin: 0 auto 82px;
+
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.field--name-field-skills {
+  @extend %flex-cards-three;
+
+  >.field__item {
+    margin-bottom: 82px;
+
+    @include tablet-up {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.paragraph--type--skills-card {
+  flex: 1;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+
+  .field--name-field-skill-bucket-icon {
+    position: relative;
+    top: -30px;
+
+    @include tablet-up {
+      top: auto;
+    }
+  }
+
+  .field--name-field-media-image-1 {
+    .field__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      margin: -30px auto 16px;
+      background-color: $blue;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 30px;
+      height: 30px;
+      filter: invert(84%) sepia(28%) saturate(3431%) hue-rotate(359deg) brightness(104%) contrast(102%);
+    }
+  }
+
+  .field--name-field-skill-bucket,
+  .field--name-field-skills-paragraph {
+    padding: 0 20px;
+  }
+
+  .field--name-field-skill-bucket {
+    @extend %h4;
+    text-align: center;
+  }
+
+  .field--name-field-skills-paragraph {
+    padding-bottom: 20px;
+
+    .field__item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+      font-size: rem(14);
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        @include fa-solid-icon($fa-var-check-circle);
+        margin-right: 6px;
+        color: $blue;
+      }
+    }
+  }
+}

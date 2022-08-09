@@ -1,0 +1,29 @@
+uuid: c83921b6-8bad-4c0d-ba72-b2766c922c1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_headshot
+    - media.type.image
+    - paragraphs.paragraphs_type.resume_header
+id: paragraph.resume_header.field_headshot
+field_name: field_headshot
+entity_type: paragraph
+bundle: resume_header
+label: Headshot
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

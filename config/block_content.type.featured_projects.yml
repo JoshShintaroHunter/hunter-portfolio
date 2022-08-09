@@ -1,0 +1,8 @@
+uuid: 60e9e056-e711-4d2b-ba66-b5463a767ae0
+langcode: en
+status: true
+dependencies: {  }
+id: featured_projects
+label: 'Featured projects'
+revision: 0
+description: ''

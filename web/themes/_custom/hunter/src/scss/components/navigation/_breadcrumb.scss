@@ -1,0 +1,42 @@
+.block-system-breadcrumb-block {
+  ol {
+    @include list-reset;
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+
+    @include desktop-up {
+      padding: 24px 0;
+    }
+
+    li {
+      &::after {
+        content: '>';
+        display: inline;
+        margin: 0 2px;
+        margin-right: 8px;
+        font-size: rem(14);
+      }
+
+      &:last-of-type {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    a {
+      font-size: rem(14);
+      color: $grey;
+
+      &:hover,
+      &:focus {
+        color: $blue;
+      }
+
+      &:focus-visible {
+        @include focus-visible($blue);
+      }
+    }
+  }
+}

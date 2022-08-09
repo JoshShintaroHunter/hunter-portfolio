@@ -1,0 +1,64 @@
+uuid: e5838c68-07b1-4751-9d74-714f0e8392ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.work_experience.field_company
+    - field.field.paragraph.work_experience.field_duration
+    - field.field.paragraph.work_experience.field_position
+    - field.field.paragraph.work_experience.field_summary
+    - field.field.paragraph.work_experience.field_technologies_used
+    - paragraphs.paragraphs_type.work_experience
+  module:
+    - link
+    - text
+id: paragraph.work_experience.default
+targetEntityType: paragraph
+bundle: work_experience
+mode: default
+content:
+  field_company:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_duration:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_position:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_summary:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_technologies_used:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

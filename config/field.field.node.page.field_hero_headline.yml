@@ -1,0 +1,21 @@
+uuid: f33a1340-6f42-418f-8731-9a2a2f52b545
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_headline
+    - node.type.page
+  module:
+    - text
+id: node.page.field_hero_headline
+field_name: field_hero_headline
+entity_type: node
+bundle: page
+label: 'Hero headline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

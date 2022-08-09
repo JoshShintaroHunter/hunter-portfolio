@@ -1,0 +1,63 @@
+uuid: 136d7af6-d8cd-40d2-9c85-dd2cc62541a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.work_experience.field_company
+    - field.field.paragraph.work_experience.field_duration
+    - field.field.paragraph.work_experience.field_position
+    - field.field.paragraph.work_experience.field_summary
+    - field.field.paragraph.work_experience.field_technologies_used
+    - paragraphs.paragraphs_type.work_experience
+  module:
+    - link
+    - text
+id: paragraph.work_experience.default
+targetEntityType: paragraph
+bundle: work_experience
+mode: default
+content:
+  field_company:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_duration:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_position:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_summary:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_technologies_used:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

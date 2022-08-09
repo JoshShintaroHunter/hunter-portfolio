@@ -1,0 +1,29 @@
+uuid: e9560716-256e-47b0-a589-a8eec604f58a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_logo
+    - media.type.logos
+    - taxonomy.vocabulary.skills
+id: taxonomy_term.skills.field_logo
+field_name: field_logo
+entity_type: taxonomy_term
+bundle: skills
+label: Logo
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      logos: logos
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

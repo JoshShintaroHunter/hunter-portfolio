@@ -1,0 +1,31 @@
+uuid: 4d4545f0-ae12-45d8-ad66-82f9042f2f48
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.skills_spotlight
+    - field.storage.block_content.field_skills
+    - paragraphs.paragraphs_type.skills_card
+  module:
+    - entity_reference_revisions
+id: block_content.skills_spotlight.field_skills
+field_name: field_skills
+entity_type: block_content
+bundle: skills_spotlight
+label: 'Skill cards'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      skills_card: skills_card
+    negate: 0
+    target_bundles_drag_drop:
+      skills_card:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

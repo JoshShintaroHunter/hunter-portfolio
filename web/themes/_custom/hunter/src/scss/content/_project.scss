@@ -1,0 +1,87 @@
+.node--type-project {
+  &.node--view-mode-full {
+    .masthead-basic {
+      display: flex;
+      align-items: center;
+    }
+
+    > .node__content {
+      @extend %hesh-container-narrow;
+
+      padding-top: 32px;
+      padding-bottom: 32px;
+
+      @include tablet-up {
+        padding-top: 64px;
+        padding-bottom: 64px;
+      }
+
+      .header {
+        margin-bottom: 64px;
+
+        @include mobile-up {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        span {
+          @extend %h3;
+
+          display: block;
+          margin-bottom: 16px;
+          line-height: 1;
+
+          @include mobile-up {
+            margin-right: 16px;
+            margin-bottom: 0;
+          }
+        }
+
+        .field--name-field-skills-used {
+          align-items: flex-end;
+        }
+
+        .field__item {
+          flex: none;
+          height: 25px
+        }
+      }
+
+      .field--name-field-logo {
+        width: 200px;
+        margin-bottom: 32px;
+      }
+
+      .field--name-field-media-image-1 {
+        > .field__item {
+          @include ratio-image;
+
+          img {
+            width: auto;
+            filter: invert(28%) sepia(69%) saturate(21%) hue-rotate(333deg) brightness(95%) contrast(86%);
+          }
+        }
+      }
+    }
+
+    .field--name-field-project-link {
+      margin-bottom: 64px;
+    }
+
+    .field--name-field-project-images {
+      margin-bottom: 32px;
+    }
+  }
+
+  &.node--view-mode-slider {
+    @extend %slider-view-mode;
+  }
+
+  &.node--view-mode-teaser {
+    @extend %teaser-card;
+  }
+
+  .field--name-field-skills-used {
+    @extend %skill-logos;
+  }
+}

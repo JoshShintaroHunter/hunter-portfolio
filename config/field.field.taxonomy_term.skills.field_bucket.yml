@@ -1,0 +1,21 @@
+uuid: 90a497a6-3dab-400b-9268-6de0f4a3ac9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_bucket
+    - taxonomy.vocabulary.skills
+  module:
+    - options
+id: taxonomy_term.skills.field_bucket
+field_name: field_bucket
+entity_type: taxonomy_term
+bundle: skills
+label: 'Skill Bucket'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

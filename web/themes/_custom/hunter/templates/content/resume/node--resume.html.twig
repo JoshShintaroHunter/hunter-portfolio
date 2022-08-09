@@ -1,0 +1,41 @@
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  <div class="masthead-basic">
+    <h1>{{ label }}</h1>
+    <div class="download-wrap">
+      <span>Download file version</span>
+      {{ content.field_resume_file_upload }}
+    </div>
+  </div>
+  {{ title_suffix }}
+  <div{{ content_attributes.addClass('node__content') }}>
+    <div class="resume">
+      {{ content.field_resume_header }}
+      <div class="resume__content">
+        {{ content.body }}
+        <div class="resume-xp">
+          <div class="resume-xp__left">
+            <h2>Work Experience</h2>
+            {{ content.field_jobs }}
+          </div>
+          <div class="resume-xp__right">
+            <h2>Skills & tools</h2>
+            {{ drupal_view('skills_list', 'block_1') }}
+            {{ content.field_skills_and_tools }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

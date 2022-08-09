@@ -1,0 +1,10 @@
+uuid: 00e123ba-dccd-4392-bfbf-3374f96268bd
+langcode: en
+status: true
+dependencies: {  }
+id: work_experience
+label: 'Work experience'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

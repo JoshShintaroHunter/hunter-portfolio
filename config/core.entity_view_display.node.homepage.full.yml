@@ -1,0 +1,88 @@
+uuid: 583ce44a-6661-4371-9f03-3d0db6d92440
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.homepage.body
+    - field.field.node.homepage.layout_builder__layout
+    - node.type.homepage
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - text
+    - user
+  theme:
+    - hunter
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_hunter_full
+        layout_settings:
+          label: 'Main content'
+          context_mapping: {  }
+          layout_background: layout-normal
+          layout_mb_bottom: mb-default
+          layout_breakout: layout-normal
+        components:
+          60ef699a-254d-4b5d-b02f-d177621e19fb:
+            uuid: 60ef699a-254d-4b5d-b02f-d177621e19fb
+            region: main
+            configuration:
+              id: 'field_block:node:homepage:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts:
+        - layout_hunter_full
+        - layout_hunter_large
+      blacklisted_blocks: {  }
+      whitelisted_blocks:
+        'Content fields':
+          - 'field_block:node:homepage:body'
+      restricted_categories:
+        - 'Chaos Tools'
+        - 'Custom blocks'
+        - Devel
+        - Forms
+        - Help
+        - Menus
+        - System
+        - User
+        - core
+id: node.homepage.full
+targetEntityType: node
+bundle: homepage
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  layout_builder__layout: true

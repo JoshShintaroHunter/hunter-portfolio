@@ -1,0 +1,22 @@
+uuid: 79b6f894-6a63-43fe-98f1-e93387f6f61d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hunter
+_core:
+  default_config_hash: ACjBZI5shAMiiUpsz-inLYVXDqNNXRnSzAWV3kV_8Hw
+id: hunter_primary_local_tasks
+theme: hunter
+region: admin_area
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

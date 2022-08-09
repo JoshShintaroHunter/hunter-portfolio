@@ -1,0 +1,8 @@
+uuid: 3c7b6d4b-241b-4e87-a148-612661edb7ba
+langcode: en
+status: true
+dependencies: {  }
+id: skills_spotlight
+label: 'Skills spotlight'
+revision: 0
+description: ''

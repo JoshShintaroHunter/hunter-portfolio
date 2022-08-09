@@ -1,0 +1,144 @@
+.node--type-resume {
+  &.node--view-mode-full {
+    > .node__content {
+      @extend %hesh-container;
+
+      padding-top: 32px;
+      padding-bottom: 32px;
+
+      @include tablet-up {
+        padding-top: 64px;
+        padding-bottom: 64px;
+      }
+    }
+  }
+}
+
+.resume {
+  max-width: 900px;
+  margin: 0 -12px;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  @include tablet-up {
+    margin: 0 auto;
+  }
+}
+
+.resume__content {
+  padding: 24px;
+
+  @include tablet-up {
+    padding: 48px 32px;
+  }
+
+  h2 {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid $white-haze;
+  }
+}
+
+.resume-xp {
+  @include tablet-up {
+    @include make-row;
+  }
+
+  h2 {
+    font-size: rem(24);
+    text-transform: uppercase;
+  }
+
+  .resume-xp__left {
+    margin-bottom: 32px;
+
+    @include tablet-up {
+      @include make-col(9);
+      margin-bottom: 0;
+      padding: 0 15px;
+
+      > h2 {
+        margin-left: -6px;
+        margin-right: -6px;
+      }
+    }
+  }
+
+  .resume-xp__right {
+    @include tablet-up {
+      @include make-col(3);
+      padding: 0 15px;
+    }
+
+    .views-element-container {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+
+//Fields
+.field--name-body {
+  margin-bottom: 32px;
+}
+
+.field--name-field-jobs {
+  border-left: 3px solid $yellow;
+
+  > .field__item {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 15px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -9px;
+      z-index: 1;
+      width: 16px;
+      height: 16px;
+      background-color: $white;
+      border: 4px solid $blue;
+      border-radius: 50%;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.view-skills-list {
+  .views-row {
+    margin-bottom: 6px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    margin-top: 16px;
+    font-size: rem(22);
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .field--name-name {
+    display: flex;
+    align-items: center;
+    font-size: rem(14);
+
+    &::before {
+      @include fa-solid-icon($fa-var-check-circle);
+      margin-top: 4px;
+      margin-right: 6px;
+      color: $blue;
+    }
+  }
+}

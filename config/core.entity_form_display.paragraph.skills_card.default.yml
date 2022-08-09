@@ -1,0 +1,40 @@
+uuid: aa02a00e-bc4c-4864-94fc-13dafa094eb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.skills_card.field_skill_bucket
+    - field.field.paragraph.skills_card.field_skill_bucket_icon
+    - field.field.paragraph.skills_card.field_skills_paragraph
+    - paragraphs.paragraphs_type.skills_card
+  module:
+    - media_library
+id: paragraph.skills_card.default
+targetEntityType: paragraph
+bundle: skills_card
+mode: default
+content:
+  field_skill_bucket:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_skill_bucket_icon:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_skills_paragraph:
+    type: options_buttons
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

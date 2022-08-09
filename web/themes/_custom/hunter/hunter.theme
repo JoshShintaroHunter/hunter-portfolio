@@ -1,0 +1,67 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the hunter theme.
+ */
+
+function hunter_preprocess_html(&$variables) {
+  if (isset($variables['#attached'])) {
+    $variables['#attached']['library'][] =  'hunter/global';
+  }
+
+  // Node type to body class
+  if (isset($variables['node_type'])) {
+    $variables['attributes']['class'][] = 'node-' . $variables['node_type'];
+  }
+}
+
+// Page preprocessing
+function hunter_preprocess_page(&$variables) {
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+    $type = $node->getType();
+    $variables['node_type'] = $type;
+  }
+}
+
+// Node Preprocess
+/*
+  Layout builder limits fields access to specically within layout builder blocks.
+  For some pages fields for the Hero/ Masthead need to be set to variables here,
+  for easy access within the template overrides.
+*/
+function hunter_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $node_type = $node->getType();
+  $nid = $node->id();
+  $variables['node_type'] = $node_type;
+
+  if ($node_type == 'page') {
+    $variables['hero_headline'] = $node->field_hero_headline->view('hero');
+  }
+
+  if ($node_type == 'project') {
+    $variables['site_link'] = $node->field_project_link->uri;
+  }
+}
+
+// Block preprocessing
+function sd_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    array_splice($suggestions, 1, 0, 'block__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+
+function hunter_preprocess_block(&$variables) {
+  if (isset($variables['elements']['#derivative_plugin_id'])) {
+    $block_id = $variables['elements']['#derivative_plugin_id'];
+  }
+  // dump($variables);
+}
+
+// Suggestion for views
+function hunter_theme_suggestions_views_view_alter(array &$suggestions, array &$variables) {
+  $suggestions[] = $variables['theme_hook_original'] . '__' . $variables['view']->id();
+}
+

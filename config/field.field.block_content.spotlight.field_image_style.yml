@@ -1,0 +1,23 @@
+uuid: 07fc099a-e007-4418-8a6d-4e8fa6ca9c38
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.spotlight
+    - field.storage.block_content.field_image_style
+  module:
+    - options
+id: block_content.spotlight.field_image_style
+field_name: field_image_style
+entity_type: block_content
+bundle: spotlight
+label: 'Image style'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: image-circle
+default_value_callback: ''
+settings: {  }
+field_type: list_string

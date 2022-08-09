@@ -1,0 +1,33 @@
+uuid: 3dfa47d6-bc86-4cb5-94c4-8cdc76995cd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.skills.field_bucket
+    - field.field.taxonomy_term.skills.field_logo
+    - taxonomy.vocabulary.skills
+  module:
+    - options
+id: taxonomy_term.skills.default
+targetEntityType: taxonomy_term
+bundle: skills
+mode: default
+content:
+  field_bucket:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_logo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true

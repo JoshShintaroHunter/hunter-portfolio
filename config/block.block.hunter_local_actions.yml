@@ -1,0 +1,20 @@
+uuid: 4dc74520-b847-4e31-a2a5-ef89ec45a0d1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - hunter
+_core:
+  default_config_hash: CdXfDmRgAvms7EQovxxWPdYi0GitxeRbVtScYK16ZH0
+id: hunter_local_actions
+theme: hunter
+region: above_content
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

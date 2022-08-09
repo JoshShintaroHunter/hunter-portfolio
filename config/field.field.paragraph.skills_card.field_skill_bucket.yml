@@ -1,0 +1,19 @@
+uuid: fe0d6b0d-1ff2-4eaf-a548-1ac1b343a970
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_skill_bucket
+    - paragraphs.paragraphs_type.skills_card
+id: paragraph.skills_card.field_skill_bucket
+field_name: field_skill_bucket
+entity_type: paragraph
+bundle: skills_card
+label: 'Skill bucket'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

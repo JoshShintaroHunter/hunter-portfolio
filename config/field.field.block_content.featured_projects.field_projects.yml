@@ -1,0 +1,29 @@
+uuid: 6f0b7fa5-7e3a-4347-ad09-55980bca166d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_projects
+    - field.storage.block_content.field_projects
+    - node.type.project
+id: block_content.featured_projects.field_projects
+field_name: field_projects
+entity_type: block_content
+bundle: featured_projects
+label: Projects
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      project: project
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

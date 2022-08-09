@@ -1,0 +1,8 @@
+overrides:
+  version: 1.x
+  css:
+    theme:
+      dist/css/hunter-layout-builder.css: {minified: true}
+  js:
+    dist/js/hunter_layout_builder_overrides-min.js: {minified: true}
+  # dependencies:

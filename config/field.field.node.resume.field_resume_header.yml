@@ -1,0 +1,37 @@
+uuid: a374ea92-dfac-4fa9-a950-d908342eab23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume_header
+    - node.type.resume
+    - paragraphs.paragraphs_type.resume_header
+  module:
+    - entity_reference_revisions
+id: node.resume.field_resume_header
+field_name: field_resume_header
+entity_type: node
+bundle: resume
+label: 'Resume header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      resume_header: resume_header
+    negate: 0
+    target_bundles_drag_drop:
+      resume_header:
+        weight: 4
+        enabled: true
+      skills_card:
+        weight: 5
+        enabled: false
+      work_experience:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

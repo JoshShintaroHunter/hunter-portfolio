@@ -1,0 +1,36 @@
+.block-inline-blockclients {
+  @extend %basic-header;
+}
+
+.field--name-field-client-logos {
+  @include make-row;
+  margin: 0 -30px;
+  justify-content: center;
+
+  .field--name-field-media-image-1 {
+    > .field__item {
+      @include ratio-image;
+
+      img {
+        filter: invert(15%) sepia(23%) saturate(6967%) hue-rotate(229deg) brightness(84%) contrast(127%);
+      }
+    }
+  }
+
+  > .field__item {
+    @include make-col(6);
+    padding: 15px;
+
+    @include tablet-up {
+      @include make-col(4);
+    }
+
+    @include tablet-up {
+      @include make-col(3);
+    }
+
+    @include desktop-up {
+      @include make-col(2);
+    }
+  }
+}

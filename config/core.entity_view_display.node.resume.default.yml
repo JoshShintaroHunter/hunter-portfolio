@@ -1,0 +1,67 @@
+uuid: 13d642c0-d47d-4982-97fd-c6278e61a184
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.resume.body
+    - field.field.node.resume.field_jobs
+    - field.field.node.resume.field_resume_file_upload
+    - field.field.node.resume.field_resume_header
+    - field.field.node.resume.field_skills_and_tools
+    - node.type.resume
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.resume.default
+targetEntityType: node
+bundle: resume
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_jobs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_resume_file_upload:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_resume_header:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_skills_and_tools:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

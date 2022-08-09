@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html{{ html_attributes }} class="{{ htmltag }}" id="top" lang="en-GB">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+    <script src="https://kit.fontawesome.com/a3f85c1e5c.js" crossorigin="anonymous"></script>
+    {{ attach_library('hunter/head_js') }}
+    {{ attach_library('hunter/vendor_js') }}
+  </head>
+  <body{{ attributes }}>
+    <a href="#main" class="visually-hidden focusable">
+      {{ 'Skip to main content'|t }}
+    </a>
+    {{ page_top }}
+    {{ page }}
+    {{ page_bottom }}
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>
