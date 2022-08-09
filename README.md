@@ -1,4 +1,4 @@
-# MBL
+# Hunter Portfolio
 
 ## Prep
 1. Set up a Pantheon account and add your keys: Log in > Account > SSH Keys > Add key
