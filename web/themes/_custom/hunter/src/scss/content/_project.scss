@@ -1,10 +1,5 @@
 .node--type-project {
   &.node--view-mode-full {
-    .masthead-basic {
-      display: flex;
-      align-items: center;
-    }
-
     > .node__content {
       @extend %hesh-container-narrow;
 
