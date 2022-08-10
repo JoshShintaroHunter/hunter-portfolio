@@ -5,18 +5,13 @@
     @include list-reset;
     display: flex;
     align-items: center;
-    padding: 16px 0;
-
-    @include desktop-up {
-      padding: 24px 0;
-    }
 
     li {
       &::after {
         content: '>';
         display: inline;
-        margin: 0 2px;
-        margin-right: 8px;
+        margin: 0 4px;
+        margin-right: 10px;
         font-size: rem(14);
       }
 
@@ -28,16 +23,18 @@
     }
 
     a {
-      font-size: rem(14);
+      @include expanding-underline($white, $yellow);
+      font-size: rem(16);
       color: $white;
 
+      &.is-active,
       &:hover,
-      &:focus {
-        color: $blue;
+      &:focus-visible {
+        color: $white;
       }
 
       &:focus-visible {
-        @include focus-visible($blue);
+        @include focus-visible($white);
       }
     }
   }

@@ -1,0 +1,33 @@
+.caption-drupal-media {
+  margin: 20px;
+
+  .media--type-image {
+    margin: 0;
+  }
+
+  &.align-left {
+    margin-left: 0;
+  }
+
+  &.align-right {
+    margin-right: 0;
+  }
+
+  figcaption {
+    font-size: rem(14);
+    font-style: italic;
+  }
+}
+
+.media--type-image {
+  margin: 20px;
+
+
+  &.align-left {
+    margin-left: 0;
+  }
+
+  &.align-right {
+    margin-right: 0;
+  }
+}
