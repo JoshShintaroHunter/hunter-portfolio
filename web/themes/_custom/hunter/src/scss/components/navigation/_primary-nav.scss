@@ -67,6 +67,18 @@
           padding: 0 16px;
         }
       }
+
+      li {
+        &.menu-item--active-trail {
+          a {
+            color: $blue;
+
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
     }
   }
 

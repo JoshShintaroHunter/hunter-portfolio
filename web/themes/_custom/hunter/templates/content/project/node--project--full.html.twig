@@ -82,6 +82,7 @@
   {{ title_prefix }}
   {{ title_suffix }}
   <div class="masthead-basic">
+    {{ drupal_block('system_breadcrumb_block') }}
     <h1>{{ label }}</h1>
   </div>
   <div{{ content_attributes.addClass('node__content') }}>
