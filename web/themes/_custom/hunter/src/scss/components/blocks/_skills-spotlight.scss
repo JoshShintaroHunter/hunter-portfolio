@@ -88,6 +88,7 @@
 
       &::before {
         @include fa-solid-icon($fa-var-check-circle);
+        margin-top: 4px;
         margin-right: 6px;
         color: $blue;
       }
