@@ -17,7 +17,9 @@
     <div class="teaser-card__image" tabindex="0">
       {{ content.field_teaser_image }}
       {{ content.field_logo }}
-      {{ content.body }}
+      <div class="card-teaser">
+        {{ content.body }}
+      </div>
     </div>
     <div class="teaser-card__content">
       <h3{{ title_attributes }}>{{ label }}</h3>
