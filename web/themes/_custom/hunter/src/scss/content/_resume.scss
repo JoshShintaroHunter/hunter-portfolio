@@ -112,11 +112,33 @@
 
 
 .view-skills-list {
+  .view-content {
+    @include make-row;
+    margin: 0 -10px;
+
+    > .views-row {
+      @include make-col(6);
+      padding: 0 10px;
+    }
+
+    @include tablet-up {
+      display: block;
+
+      > .views-row {
+        display: block;
+        max-width: 100%;
+        padding: 0;
+      }
+    }
+  }
+
   .views-row {
     margin-bottom: 6px;
 
-    &:last-of-type {
-      margin-bottom: 0;
+    @include tablet-up {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -131,7 +153,7 @@
 
   .field--name-name {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     font-size: rem(14);
 
     &::before {
