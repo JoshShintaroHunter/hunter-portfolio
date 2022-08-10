@@ -1,33 +1,72 @@
-.caption-drupal-media {
-  margin: 20px;
+.field--name-body {
+  .caption-drupal-media {
+    margin: 16px 0;
+
+    @include tablet-up {
+      margin: 16px 32px;
+    }
+
+    .media--type-image {
+      margin: 0;
+    }
+
+    &.align-left,
+    &.align-right {
+      float: none;
+    }
+
+    &.align-left {
+      margin-left: 0;
+
+      @include tablet-up {
+        float: left;
+      }
+    }
+
+    &.align-right {
+      margin-right: 0;
+
+      @include tablet-up {
+        float: right;
+      }
+    }
+
+    figcaption {
+      font-size: rem(14);
+      font-style: italic;
+    }
+  }
 
   .media--type-image {
-    margin: 0;
-  }
+    margin: 16px 0;
 
-  &.align-left {
-    margin-left: 0;
-  }
+    @include tablet-up {
+      margin: 16px 32px;
+    }
 
-  &.align-right {
-    margin-right: 0;
-  }
+    img {
+      width: auto;
+    }
 
-  figcaption {
-    font-size: rem(14);
-    font-style: italic;
-  }
-}
+    &.align-left,
+    &.align-right {
+      float: none;
+    }
 
-.media--type-image {
-  margin: 20px;
+    &.align-left {
+      margin-left: 0;
 
+      @include tablet-up {
+        float: left;
+      }
+    }
 
-  &.align-left {
-    margin-left: 0;
-  }
+    &.align-right {
+      margin-right: 0;
 
-  &.align-right {
-    margin-right: 0;
+      @include tablet-up {
+        float: right;
+      }
+    }
   }
 }

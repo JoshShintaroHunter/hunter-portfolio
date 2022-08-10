@@ -74,17 +74,17 @@
   }
 
   .field--name-field-skills-paragraph {
+    @include make-row;
     padding-bottom: 20px;
+    margin: 0 -10px;
 
     .field__item {
+      @include make-col(6);
       display: flex;
       align-items: center;
       margin-bottom: 6px;
+      padding: 0 10px;
       font-size: rem(14);
-
-      &:last-of-type {
-        margin-bottom: 0;
-      }
 
       &::before {
         @include fa-solid-icon($fa-var-check-circle);
