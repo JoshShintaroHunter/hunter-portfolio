@@ -147,6 +147,10 @@
   background-color: transparent;
   border: 0;
 
+  &:focus-visible {
+    @include focus-visible($blue);
+  }
+
   i {
     display: block;
     font-size: rem(16);

@@ -88,8 +88,6 @@
 .lb-section {
   @extend %lb-section;
 
-  margin-bottom: 24px;
-
   @include desktop-up {
     margin-bottom: 0;
     // Spacing for blocks in rows
