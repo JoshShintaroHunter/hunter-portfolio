@@ -116,7 +116,7 @@
     @include make-row;
     margin: 0 -10px;
 
-    > .views-row {
+    .views-row {
       @include make-col(6);
       padding: 0 10px;
     }
@@ -124,7 +124,7 @@
     @include tablet-up {
       display: block;
 
-      > .views-row {
+      .views-row {
         display: block;
         max-width: 100%;
         padding: 0;
