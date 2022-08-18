@@ -54,8 +54,8 @@
   margin: 0 -2px;
 
   > .field__item {
-    margin: 0 4px;
-    padding: 2px 6px;
+    margin: 0 4px 8px;
+    padding: 4px 8px;
     font-weight: bold;
     font-size: rem(14);
     color: $white;
@@ -163,11 +163,27 @@
 //Teaser card
 %teaser-card {
   overflow: hidden;
+  background-color: $white;
   border-radius: $border-radius;
 
   .teaser-card__image {
     position: relative;
     overflow: hidden;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    .field--name-field-teaser-image {
+      height: 100%;
+
+      * {
+        height: 100%;
+      }
+
+      img {
+        min-height: 230px;
+        object-fit: cover;
+      }
+    }
 
     &:hover,
     &:focus-visible {
