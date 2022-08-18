@@ -19,7 +19,7 @@ Every issue on Drupal.org automatically creates a new community-accessible fork
 that you can contribute to. Learn more about the code contribution process on
 the [Issue forks & merge requests page][issue forks].
 
-## Usagees
+## Usage
 
 For a brief introduction, see [USAGE.txt](/core/USAGE.txt). You can also find
 guides, API references, and more by visiting Drupal's [documentation

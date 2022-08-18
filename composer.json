@@ -15,12 +15,14 @@
         }
     ],
     "require": {
-        "drupal/core-recommended": "^9.4",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "^2.3",
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
+        "drupal/core-recommended": "^9.4",
+        "drupal/core-vendor-hardening": "^9.4",
+        "drupal/devel": "^4.1",
         "drupal/layout_builder_modal": "^1.1",
         "drupal/layout_builder_restrictions": "^2.13",
         "drupal/layout_options": "^1.0",
@@ -44,7 +46,8 @@
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "drupal/core-vendor-hardening": true
         }
     },
     "extra": {
