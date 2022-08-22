@@ -14,22 +14,12 @@
       .header {
         margin-bottom: 64px;
 
-        @include mobile-up {
-          display: flex;
-          flex-wrap: wrap;
-        }
-
         span {
           @extend %h4;
 
           display: block;
           margin-bottom: 16px;
           line-height: 1;
-
-          @include mobile-up {
-            margin-right: 16px;
-            margin-bottom: 0;
-          }
         }
 
         .field--name-field-skills-used {

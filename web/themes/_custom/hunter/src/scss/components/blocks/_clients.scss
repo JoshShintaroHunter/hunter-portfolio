@@ -13,6 +13,7 @@
 
       img {
         filter: invert(15%) sepia(23%) saturate(6967%) hue-rotate(229deg) brightness(84%) contrast(127%);
+        object-fit: contain;
       }
     }
   }
