@@ -50,15 +50,23 @@
       color: $white;
     }
 
-    a {
-      @extend %social-media-link;
+    .field--name-field-social-media {
+      a {
+        @extend %social-media-link;
+        @include expanding-underline($white, $white);
 
-      opacity: 0.8;
-      transition: opacity ease-in 0.3s;
+        opacity: 0.8;
+        transition: opacity ease-in 0.3s;
 
-      &:hover,
-      &:focus {
-        opacity: 1;
+        &::after {
+          margin: 0;
+        }
+
+        &:hover,
+        &:focus-visible {
+          opacity: 1;
+          color: $white;
+        }
       }
     }
 
