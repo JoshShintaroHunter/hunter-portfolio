@@ -171,7 +171,11 @@
         filter: invert(95%) sepia(75%) saturate(0%) hue-rotate(98deg) brightness(105%) contrast(104%);
 
         &[src*='aed'] {
-          filter: invert(0%) sepia(23%) saturate(6967%) hue-rotate(229deg) brightness(84%) contrast(127%);
+          filter: none;
+        }
+
+        &[src*='white'] {
+          filter: none;
         }
       }
     }
