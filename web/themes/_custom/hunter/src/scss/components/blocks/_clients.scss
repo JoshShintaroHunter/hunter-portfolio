@@ -18,6 +18,10 @@
         &[src*='aed'] {
           filter: none;
         }
+
+        &[src*='white'] {
+          filter: none;
+        }
       }
     }
   }
